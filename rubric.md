@@ -42,9 +42,6 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 - Student work uses a form to collect information about the user and display that information; include things like buttons, sliders, checkboxes, radio buttons, etc. 
 - Student work includes a styled a form, landing page, and game with class-based CSS 
 - Student work includes a media query for a tablet to make the game responsive 
-- Student uses flexbox to lay out game
-
-
 
 ---
 
