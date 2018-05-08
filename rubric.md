@@ -87,7 +87,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |Presentation includes wireframes and screenshots for the game page and landing page|4||||
 |<th colspan=4>Technical (58 points)</th>
 |Student work renders a game in the browser|8||||
-|Student work includes only jQuery for DOM manipulation|4||||
+|Student work includes only jQuery **or** vanilla js for DOM manipulation, not both|4||||
 |Student work includes at least one CSS transition fired by a DOM event|2||||
 |Student work has as landing page, inspired by an existing web page, that links to a game|4||||
 |Student work uses a form to collect information about the user and display that information; include things like buttons, sliders, checkboxes, radio buttons, etc.|2||||
