@@ -30,8 +30,7 @@ This assignment, as outlined below, must be complete in totality by:
 - Use only jQuery **or** vanilla JavaScript for DOM manipulation - **not both**
 - Be deployed via GitHub pages.
 - Include at least one CSS transition fired by a DOM event.
-- Include a landing page that includes a form.
-- Use said form to collect information about the player(s) which will be displayed on the game page. Be sure to add things to your form, if needed, like buttons, sliders, checkboxes, radio buttons, etc.
+- Include a landing page.
 - Be styled with CSS.
 - Be responsive.
 
