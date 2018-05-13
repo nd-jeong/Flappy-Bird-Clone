@@ -35,8 +35,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 - Student work includes either jQuery **or** vanilla jav for DOM manipulation - not a mixture of both.
 - Student work includes at least one CSS transition fired by a DOM event
 - Student work has as landing page that links to a game
-- Student work uses a form to collect information about the user and display that information; include things like buttons, sliders, checkboxes, radio buttons, etc.
-- Student work includes a styled form, landing page, and game with class-based CSS
+- Student work includes a landing page, and game with class-based CSS
 - Student work includes is responsive and is enjoyable on mobile devises as well as desktop browsers.
 
 ## QUALITY AND CONSISTENCY
@@ -90,8 +89,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |Student work includes only jQuery **or** vanilla js for DOM manipulation, not both|4||||
 |Student work includes at least one CSS transition fired by a DOM event|2||||
 |Student work has as landing page, inspired by an existing web page, that links to a game|4||||
-|Student work uses a form to collect information about the user and display that information; include things like buttons, sliders, checkboxes, radio buttons, etc.|2||||
-|Student work includes a styled a form, landing page, and game with **class-based CSS**|2||||
+|Student work includes a landing page, and game with **class-based CSS**|2||||
 |Student work includes a media query for a tablet to make the game responsive|2||||
 |Code adheres to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing JavaScript|8||||
 |Code adheres to the [Google style guide](https://google.github.io/styleguide/htmlcssguide.xml) for writing HTML/CSS|8||||
