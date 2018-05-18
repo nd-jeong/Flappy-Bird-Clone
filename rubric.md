@@ -70,12 +70,6 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 * Student created and got approval for a wireframe for a game page
 
 ## Grading Rubric
-
-| Evaluation Metric | max | Incomplete (0) | Did not meet expectations (half) | Meets Expectations (full) |
-| ----------------- | --- | -------------- | -------------------------------- | ------------------------- |
-
-
-
 |  Evaluation Metric | max |Incomplete (0) | Did not meet expectations (half) | Meets Expectations  (full) |   
 |---|---|---|---|---|
 |<th colspan=4>Project Deliverables (26 points)</th>
