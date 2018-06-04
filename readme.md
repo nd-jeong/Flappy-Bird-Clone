@@ -102,6 +102,12 @@ Fight, sink all the enemy ships!
 
 ---
 
+### Previous Student Projects
+
+[DogSweeper](http://stupefied-easley-bcbbd0.bitballoon.com/)
+
+[Donut Touch](http://donuttouch.bitballoon.com/index.html)
+
 ### Useful Resources
 
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
