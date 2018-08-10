@@ -26,6 +26,7 @@ This assignment, as outlined below, must be complete in totality by:
 
 #### Your game website must:
 
+- Be a working, interactive, non-trivial game.
 - Be deployed via GitHub pages.
 - Include at least one CSS transition fired by a DOM event.
 - Be styled with CSS.
