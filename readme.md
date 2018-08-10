@@ -59,19 +59,3 @@ This assignment, as outlined below, must be complete in totality by:
 
 #### For the game:
 - A git repository hosted on GitHub, with a link to your hosted game, and frequent commits dating back to the very beginning of the project (YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO. DO NOT build your app in this repository. YOU MUST initiate a new repo on your GitHub account.)
-
-## Useful Resources
-
-* **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
-* **[jQuery Docs](http://api.jquery.com)**
-* **[GitHub Pages](https://pages.github.com)** _(for hosting your game)_
-
-## Project Feedback + Evaluation
-
-Your project will be evaluated using [this rubric](rubric.md), assessing the following:
-
-- **Professionalism**
-- **Functionality and Requirements**
-- **Quality and Consistency**
-- **Workflow and Deployment**
-- **Creativity**
