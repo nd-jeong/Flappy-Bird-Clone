@@ -16,7 +16,7 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Tuesday, August 14th at 9:00 AM**
+**Wednesday, August 15th at 9:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
