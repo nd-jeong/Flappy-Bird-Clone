@@ -8,7 +8,7 @@ Everyone will get a chance to be creative, and work through some really tough pr
 
 You will be working individually for this project, but we'll be guiding you along the process and helping as you go.
 
-As part of this project, you'll be required to create a project presentation that you will use to present your work at the end of project week. Your goal for this presentation is to extract the most important aspects of what went into building your project into easy-to-use language and practice speaking and presenting about your code.
+As part of this project, you'll be required to present your project to your instructors and classmates in a "Science Fair" showcase. Your goal for this presentation is to extract the most important aspects of what went into building your project into easy-to-use language and practice speaking and presenting about your code (and having people play your game!)
 
 Show us what you've got!
 
@@ -16,11 +16,11 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Tuesday, May 8th at 9:00 AM**
+**Tuesday, August 14th at 9:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
-**Monday, May 14th at 9:00 AM**.
+**Monday, August 20th at 9:00 AM**.
 
 ## Requirements
 
