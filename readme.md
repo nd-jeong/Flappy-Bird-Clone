@@ -8,7 +8,7 @@ Everyone will get a chance to be creative, and work through some really tough pr
 
 You will be working individually for this project, but we'll be guiding you along the process and helping as you go.
 
-As part of this project, you'll be required to present your project to your instructors and classmates in a "Science Fair" showcase. Your goal for this presentation is to extract the most important aspects of what went into building your project into easy-to-use language and practice speaking and presenting about your code (and having people play your game!)
+As part of this project, you'll be required to present your project to your instructors and classmates in a "Science Fair" showcase. Your goal for this presentation is to extract the most important aspects of what went into building your project into easy-to-use language and practice speaking and presenting about your code (and have people play your game!)
 
 Show us what you've got!
 
