@@ -30,6 +30,8 @@ This assignment, as outlined below, must be complete in totality by:
 - Be deployed via GitHub pages.
 - Include at least one CSS transition fired by a DOM event.
 - Be styled with CSS.
+- Use flexbox or (CSS grid) for layout and positioning (** no floats ** except to wrap text around an image!)
+
 
 #### Your code must:
 
