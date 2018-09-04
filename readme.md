@@ -16,11 +16,11 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Wednesday, August 15th at 9:00 AM**
+**Wednesday, September 5th at 9:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
-**Monday, August 20th at 9:00 AM**.
+**Monday, September 10th at 9:00 AM**.
 
 ## Requirements
 
@@ -28,16 +28,16 @@ This assignment, as outlined below, must be complete in totality by:
 
 - Be a working, interactive, non-trivial game.
 - Be deployed via GitHub pages.
-- Include at least one CSS transition fired by a DOM event.
+- Include at least one CSS animation/transition fired by a DOM event.
 - Be styled with CSS.
-- Use flexbox or (CSS grid) for layout and positioning (** no floats ** except to wrap text around an image!)
+- Use flexbox or (CSS grid) for layout and positioning
 
 
 #### Your code must:
 
 - Be properly indented
 - Be written with semantic, camelCase JavaScript variable names
-- Be written with kebab-case CSS class names
+- Be written with kebab-case CSS class names (e.g. this-is-the-class-name)
 - No console.log() or commented out code in final version
 
 #### Your README must:
@@ -60,4 +60,4 @@ This assignment, as outlined below, must be complete in totality by:
 	- An explanation of how you foresee yourself solving the aforementioned problems.
 
 #### For the game:
-- A git repository hosted on GitHub, with a link to your hosted game, and frequent commits dating back to the very beginning of the project (YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO. DO NOT build your app in this repository. YOU MUST initiate a new repo on your GitHub account.)
+- A git repository hosted on GitHub, with a link to your hosted game, and frequent commits dating back to the very beginning of the project (**YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO**. **DO NOT** build your app in this repository. **YOU MUST** initiate a new repo on your GitHub account.)
