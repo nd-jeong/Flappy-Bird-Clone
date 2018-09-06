@@ -92,7 +92,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |Student work renders a game in the browser | 8
 |Student work includes at least one CSS transition fired by a DOM event | 2
 |Student work has as landing page, inspired by an existing web page, that links to a game | 4
-|Student work uses Flexbox or (CSS grid) for layout and positioning |2
+|Student work uses Flexbox or (CSS grid) for layout and positioning |4
 |Student work includes a landing page and game with **class-based CSS** | 2
 |Student work includes a media query for a tablet to make the game responsive | 2
 |Code adheres to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing JavaScript | 8
