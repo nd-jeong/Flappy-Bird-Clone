@@ -16,7 +16,7 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Wednesday, December 18th at 10:00 AM**
+**Tuesday, December 18th at 10:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
