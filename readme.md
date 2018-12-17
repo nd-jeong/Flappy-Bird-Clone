@@ -16,18 +16,18 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Wednesday, September 5th at 9:00 AM**
+**Wednesday, December 18th at 10:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
-**Monday, September 10th at 9:00 AM**.
+**Friday, December 21th at 10:00 AM**.
 
 ## Requirements
 
 #### Your game website must:
 
 - Be a working, interactive, non-trivial game.
-- Be deployed via GitHub pages.
+- Be deployed via GitHub Pages or [surge.sh](https://surge.sh/)
 - Include at least one CSS animation/transition fired by a DOM event.
 - Be styled with CSS.
 - Use flexbox or (CSS grid) for layout and positioning
@@ -43,12 +43,9 @@ This assignment, as outlined below, must be complete in totality by:
 #### Your README must:
 
 - Name of your project
-- Brief description of the game
 - A link to your deployed game
+- The guidelines outlined in this [project worksheet](https://gist.git.generalassemb.ly/rachelmoskowitz/f168f8a6d51ace56b84315e81933685c).
 
-**Bonus**
-
-- Include a "Tutorial Section" of this landing page (why: instructions help think through the "UX" of your project)
 
 ## Necessary Deliverables
 

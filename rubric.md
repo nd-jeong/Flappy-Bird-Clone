@@ -34,7 +34,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 * Presentation uses easy-to-understand language
 * Presentation includes a wireframe for the game page and an existing landing page from the web to build from
 * Student work renders a game in the browser
-* Student work includes either jQuery **or** vanilla jav for DOM manipulation - not a mixture of both.
+* Student work includes vanilla javascript for DOM manipulation
 * Student work includes at least one CSS transition fired by a DOM event
 * Student work has as landing page that links to a game
 * Student work includes a landing page, and game with class-based CSS
