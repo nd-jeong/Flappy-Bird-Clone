@@ -88,7 +88,7 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |Presentation effectively describes constraints to work with (e.g. technological, timing, content, etc.)|2
 |Presentation uses easy-to-understand language |2
 |Presentation includes wireframes for the game page and landing page | 4 
-|<th colspan=4>Technical (46 points)</th>
+|<th colspan=4>Technical (48 points)</th>
 |Student work renders a game in the browser | 8
 |Student work uses Flexbox or (CSS grid) for layout and positioning |4
 |Code adheres to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing JavaScript | 8
