@@ -88,16 +88,12 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |Presentation effectively describes constraints to work with (e.g. technological, timing, content, etc.)|2
 |Presentation uses easy-to-understand language |2
 |Presentation includes wireframes for the game page and landing page | 4 
-|<th colspan=4>Technical (54 points)</th>
+|<th colspan=4>Technical (46 points)</th>
 |Student work renders a game in the browser | 8
-|Student work includes at least one CSS transition fired by a DOM event | 2
-|Student work has as landing page, inspired by an existing web page, that links to a game | 4
 |Student work uses Flexbox or (CSS grid) for layout and positioning |4
-|Student work includes a landing page and game with **class-based CSS** | 2
-|Student work includes a media query for a tablet to make the game responsive | 2
 |Code adheres to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing JavaScript | 8
 |Code adheres to the [Google style guide](https://google.github.io/styleguide/htmlcssguide.xml) for writing HTML/CSS |8
 |Code is commented appropriately |8
 |Student added a personal spin to the project|8
-|<th colspan=4>TOTAL POSSIBLE POINTS(108)
+|<th colspan=4>TOTAL POSSIBLE POINTS(100)
 
