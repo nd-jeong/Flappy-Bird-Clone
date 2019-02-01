@@ -91,8 +91,8 @@ Project 1 will be assessed using the following standards and evaluation metrics 
 |<th colspan=4>Technical (48 points)</th>
 |Student work renders a game in the browser | 8
 |Student work uses Flexbox or (CSS grid) for layout and positioning |4
-|Code adheres to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing JavaScript | 8
-|Code adheres to the [Google style guide](https://google.github.io/styleguide/htmlcssguide.xml) for writing HTML/CSS |8
+|Javascript Variables are written in camelCase| 8
+|CSS class names are written in kebab-case |8
 |Code is commented appropriately |8
 |Student added a personal spin to the project|8
 |<th colspan=4>TOTAL POSSIBLE POINTS(100)
