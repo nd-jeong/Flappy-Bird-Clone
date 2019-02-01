@@ -77,7 +77,31 @@ This assignment, as outlined below, must be complete in totality by:
 - Consult documentation resources (MDN, CSS Tricks etc.) at home to better understand what you’ll be getting into.
 - Don’t be afraid to write code that you know you will have to remove later. Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
 
-## Project Feedback + Evaluation
+---
+
+#### Potential Project Ideas
+
+##### Blackjack
+Make a one player game where people down on their luck can lose all their money by guessing which card the computer will deal next!
+
+##### Connect 4
+Implement your own famous kids game!
+
+##### Battleship
+
+Fight, sink all the enemy ships!
+
+---
+
+
+### Useful Resources
+
+* **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
+* **[GitHub Pages](https://pages.github.com)** _(for hosting your game)_
+
+---
+
+#### Project Feedback + Evaluation
 
 Your project will be evaluated using [this rubric](rubric.md), assessing the following:
 
