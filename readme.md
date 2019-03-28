@@ -16,28 +16,27 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Tuesday, December 18th at 10:00 AM**
+**Monday, April 1st at 10:00 AM**
 
 This assignment, as outlined below, must be complete in totality by:
 
-**Friday, December 21th at 10:00 AM**.
+**Friday, April 5th at 10:00 AM**.
 
 ## Requirements
 
 #### Your game website must:
 
 - Be a working, interactive, non-trivial game.
-- Be deployed via GitHub Pages or [surge.sh](https://surge.sh/)
+- Be deployed via GitHub Pages.
 - Include at least one CSS animation/transition fired by a DOM event.
 - Be styled with CSS.
-- Use flexbox or (CSS grid) for layout and positioning
-
+- Use flexbox or CSS grid for layout and positioning.
 
 #### Your code must:
 
-- Be properly indented
-- Be written with semantic, camelCase JavaScript variable names
-- Be written with kebab-case CSS class names (e.g. this-is-the-class-name)
+- Be properly indented.
+- Be written with semantic, camelCase JavaScript variable names.
+- Be written with kebab-case CSS class names (e.g. this-is-the-class-name).
 - No console.log() or commented out code in final version
 
 #### Your README must:
