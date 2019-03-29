@@ -43,7 +43,6 @@ This assignment, as outlined below, must be complete in totality by:
 
 - Name of your project
 - A link to your deployed game
-- The guidelines outlined in this [project worksheet](https://gist.git.generalassemb.ly/rachelmoskowitz/f168f8a6d51ace56b84315e81933685c).
 
 
 ## Necessary Deliverables
@@ -63,9 +62,6 @@ This assignment, as outlined below, must be complete in totality by:
     - An explanations of the technologies used
     - Select wireframes
     - Additional information including but not limited to - the approach taken, installation instructions, unsolved problems, etc.
-
-#### For the 3-minute screencast:
-    - A Quicktime screencast
 
 ## Suggested Ways to Get Started
 
