@@ -16,17 +16,17 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Monday, April 1st at 10:00 AM**
+**Monday, May 6th at 1:30 PM**
 
 This assignment, as outlined below, must be complete in totality by:
 
-**Friday, April 5th at 10:00 AM**.
+**Friday, May 10th at 10:00 AM**.
 
 ## Requirements
 
 #### Your game website must:
 
-- Be a working, interactive, non-trivial game.
+- Be a working, interactive game.
 - Be deployed via GitHub Pages.
 - Include at least one CSS animation/transition fired by a DOM event.
 - Be styled with CSS.
