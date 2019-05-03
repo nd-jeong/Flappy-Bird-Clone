@@ -16,7 +16,7 @@ Show us what you've got!
 
 Your proposal for this project, as outlined in the proposal section below, must be completed and ready to present for approval by:
 
-**Monday, May 6th at 1:30 PM**
+**Monday, May 6th at 1:30 PM** (you will have Monday morning to prepare them)
 
 This assignment, as outlined below, must be complete in totality by:
 
@@ -27,7 +27,7 @@ This assignment, as outlined below, must be complete in totality by:
 #### Your game website must:
 
 - Be a working, interactive game.
-- Be deployed via GitHub Pages.
+- Be deployed via GitHub Pages (we will be going over this in class).
 - Include at least one CSS animation/transition fired by a DOM event.
 - Be styled with CSS.
 - Use flexbox or CSS grid for layout and positioning.
@@ -51,10 +51,11 @@ This assignment, as outlined below, must be complete in totality by:
 - A collection of wireframes - hand-drawn or digitally created - outlining the important pages of your site, as well as the critical states of your game (start state, play state(s) win state). As some games have many or infinite numbers of play states and win state, you can just provide a few simplified diagrams to convey the general idea.
 - A proposal including:
 	- A description of the game you'll be building with the objective described in non-technical language.
+    - A target MVP (minimum viable product), along with some additional features / enhancements that you will include if you reach MVP early
     - A list of the main technologies you plan to use.
 	- An explanation of the major problems you plan to face while implementing this game.
 	- An explanation of how you foresee yourself solving the aforementioned problems.
-
+    
 #### For the game:
 - A git repository hosted on GitHub, with a link to your hosted game, and frequent commits dating back to the very beginning of the project (**YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO**. **DO NOT** build your app in this repository. **YOU MUST** initiate a new repo on your GitHub account.)
 - A README file with:
