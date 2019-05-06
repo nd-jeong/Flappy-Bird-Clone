@@ -1,13 +1,14 @@
 // Variables
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-let gap = 50;
+let gap = 650;
 let birdX = 10;
 let birdY = 360;
 let gravity = 2;
 let pipeX = canvas.width;
-let pipeTopY = 0;
-let pipeBottomY = pipeX - gap;
+let pipeBottomY = 300;
+let pipeTopY = pipeBottomY - gap;
+let velocity = 2;
 
 const pipes = [];
 
@@ -26,21 +27,22 @@ const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.drawImage(bird, birdX, birdY);
-    ctx.drawImage(pipeTop, pipeX-100, -250);
-    ctx.drawImage(pipeBottom, pipeX-100, 350);
+    ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
+    ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
     
     requestAnimationFrame(drawMap);
 }
 
 drawMap();
 
+document.addEventListener('click', flapBird());
+
 const flapBird = () => {
-    document.addEventListener('click', function() {
         birdY -= 25;
-    });
 }
 
-// const newPipe = () => {
-//     pipeTopY = Math.floor(Math.random * )
-//     ctx.drawImage(pipeTop, pipeX, )
-// }
+const newPipe = () => {
+    pipeBottomY = (Math.floor(Math.random() * (500 - 200) + 200));
+    ctx.drawImage(pipeBottom, pipeX, pipeBottomY);
+    ctx.drawImage(pipeTop, pipeX, pipeTopY);
+}
