@@ -1,8 +1,13 @@
 // Variables
-let gap = 100;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let gap = 50;
 let birdX = 10;
 let birdY = 360;
 let gravity = 2;
+let pipeX = canvas.width;
+let pipeTopY = 0;
+let pipeBottomY = pipeX - gap;
 
 const pipes = [];
 
@@ -16,12 +21,10 @@ const bg = new Image();
 bg.src = 'images/background-night.png';
 
 const drawMap = () => {
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(bird, birdX, birdY);
-    ctx.drawImage(pipeTop, 100, 0, 100, 350);
-    ctx.drawImage(pipeBottom, 100, 500, 100, 350);
+    ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
+    ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
     
     requestAnimationFrame(drawMap);
 }
