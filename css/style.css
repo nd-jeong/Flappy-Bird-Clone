@@ -1,4 +1,8 @@
+body {
+    background: black;
+}
+
 #canvas {
-    background-color: black;
+    background-color: white;
     transform: translateX(100%);
 }
