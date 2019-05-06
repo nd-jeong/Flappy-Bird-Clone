@@ -19,12 +19,15 @@ const pipeBottom = new Image();
 pipeBottom.src = 'images/pipe-green-bottom.png';
 const bg = new Image();
 bg.src = 'images/background-night.png';
+const ground = new Image();
+ground.src = 'images/base.png';
 
 const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.drawImage(bird, birdX, birdY);
-    ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
-    ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
+    ctx.drawImage(pipeTop, pipeX-100, -250);
+    ctx.drawImage(pipeBottom, pipeX-100, 350);
     
     requestAnimationFrame(drawMap);
 }
@@ -36,3 +39,8 @@ const flapBird = () => {
         birdY -= 25;
     });
 }
+
+// const newPipe = () => {
+//     pipeTopY = Math.floor(Math.random * )
+//     ctx.drawImage(pipeTop, pipeX, )
+// }
