@@ -57,6 +57,7 @@ const drawMap = () => {
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.font = "24px sans-serif";
     ctx.fillText(`Score: ${score}`, canvas.width - 125, canvas.height - 25);
+    increaseScore();
     gameOver();
     requestAnimationFrame(drawMap);
 }
@@ -92,6 +93,14 @@ function gameOver() {
                 console.log("COLLISION WARNING TOP");
                 document.removeEventListener('click', flapWings());
             } 
+        }
+    }
+}
+
+function increaseScore() {
+    for (let j = 0; j < pipes.length; j++) {
+        if (birdX === pipes[j].x) {
+            score++;
         }
     }
 }
