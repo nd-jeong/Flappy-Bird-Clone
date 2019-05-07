@@ -35,7 +35,6 @@ let pipeWidth = pipeTop.width;
 
 const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
-    ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.drawImage(bird, birdX, birdY);
     birdY += gravity;
     
@@ -49,10 +48,11 @@ const drawMap = () => {
             newPipe();
         }
         if (pipes[i].x + pipeWidth === 0) {
-            setTimeout(pipes.splice(0, 1), 500);
+            pipes.shift();
             console.log(pipes);
         }
     }
+    ctx.drawImage(ground, 0, 575, canvas.width, 100);
 
     requestAnimationFrame(drawMap);
 }
