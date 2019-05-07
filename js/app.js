@@ -34,6 +34,13 @@ const ground = new Image();
 ground.src = 'images/base.png';
 // --------------------------
 
+const scoreSfx = new Audio();
+scoreSfx.src = 'audio/sfx_point.wav';
+const hitSfx = new Audio();
+hitSfx.src = 'audio/sfx_hit.wav';
+const flapSfx = new Audio();
+flapSfx.src = 'audio/sfx_wing.wav';
+
 let pipeWidth = pipeTop.width;
 // https://www.youtube.com/watch?v=cXgA1d_E-jY
 
@@ -66,6 +73,7 @@ drawMap();
 
 document.addEventListener('click', function flapWings() {
     birdY -= 50;
+    flapSfx.play();
 });
 
 
@@ -83,14 +91,14 @@ const newPipe = () => {
 
 function gameOver() {
     if (birdY > canvas.height - ground.height) {
-        console.log("ALTITUDE WARNING");
         gravity = 0;
+        hitSfx.play();
         document.removeEventListener('click', flapWings());
     }
     for (let k = 0; k < pipes.length; k++) {
         if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
             if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
-                console.log("COLLISION WARNING TOP");
+                hitSfx.play();
                 document.removeEventListener('click', flapWings());
             } 
         }
@@ -101,6 +109,21 @@ function increaseScore() {
     for (let j = 0; j < pipes.length; j++) {
         if (birdX === pipes[j].x) {
             score++;
+            scoreSfx.play();
+            increaseSpeed();
         }
     }
+}
+
+function increaseSpeed() {
+    if (score % 5 === 0) {
+        // velocity += 0.5;
+        gravity += 0.5;
+        console.log(velocity);
+    }
+}
+
+function gameReset() {
+    document.getElementById();
+    window.reload();
 }
