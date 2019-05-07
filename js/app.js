@@ -39,7 +39,7 @@ const drawMap = () => {
     
 
     for (i = 0; i < pipes.length; i++) {
-        ctx.drawImage(pipeTop, pipes[i].x, pipeTopY);
+        ctx.drawImage(pipeTop, pipes[i].x, pipes[i].y - gap);
         ctx.drawImage(pipeBottom, pipes[i].x, pipes[i].y);
         pipes[i].x -= velocity;
         if (pipes[i].x === 300) {
@@ -65,10 +65,12 @@ document.addEventListener('click', function() {
 const newPipe = () => {
         newPipeY = (Math.floor(Math.random() * (500 - 200) + 200));
         newPipeTopY = newPipeY - gap;
+        console.log(newPipeTopY);
         pipes.push({
             x: pipeX,
             y: newPipeY
         });
+        ctx.drawImage(pipeTop, pipeX, pipes[i].y);
         ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
-        ctx.drawImage(pipeTop, pipeX, pipes[i].y - gap);
+        debugger;
 }
