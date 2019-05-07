@@ -4,7 +4,7 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Monday| Wireframes / Priority Matrix / Functional Components | Incomplete
+|Monday| Wireframes / Priority Matrix / Functional Components | Complete
 |Tuesday| Core Application Structure (HTML, CSS, etc.), Psuedocode, Start JS | Incomplete
 |Wednesday| JS MVP | Incomplete
 |Thusday| JS MVP / Full Working JS  | Incomplete
@@ -74,10 +74,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Wireframes | H | 3hrs| 0hrs | 0hrs |
-| Project Worksheet | M | 1hrs| 0hrs | 0hrs |
-| Game Init | H | 3hrs| 0hrs | 0hrs |
-| Player Gravity | H | 3hrs| 0hrs | 0hrs |
+| Wireframes | H | 3hrs| 0hrs | 0.5hrs |
+| Project Worksheet | M | 1hrs| 0hrs | 0.5hrs |
+| Game Init | H | 3hrs| 0hrs | 1.5hrs |
+| Player Gravity | H | 3hrs| 0hrs | 0.5hrs |
 | Board Scrolling | H | 5hrs| 0hrs | 0hrs |
 | Player Height Increase | H | 2hrs| 0hrs | 0hrs |
 | Add Obstacles| H | 3hrs|  0hrs  |  0hrs  |
@@ -89,7 +89,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Insert Sprites| L | 1hrs|  0hrs  |  0hrs  |
 | Game Reset| L | 1hrs|  0hrs  |  0hrs  |
 | Sound Effects| L | 1hrs|  0hrs  |  0hrs  |
-| Total | H | 38hrs| 0hrs | 0hrs |
+| Total | H | 38hrs| 0hrs | 3hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
