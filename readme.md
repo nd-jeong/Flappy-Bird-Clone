@@ -41,6 +41,9 @@ Include a full list of features that have been prioritized based on the `Time an
 - Increase scrolling speed over time
 - Insert sprites
 - Insert sound effects
+- Smooth out animation
+- Create Insane mode
+- Create landing page
 
 ## Functional Components
 
@@ -69,6 +72,9 @@ Based on the initial logic defined in the previous  phases section try and break
 ### Additional
   - add sprites
   - add sound effects
+  - Insane Mode
+    - increased velocity
+    - increased gravity
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
 
@@ -83,12 +89,14 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Obstacle Collision Detection | H | 4hrs|  0hrs  |  3hrs  |
 | Ground Collision Detection | H | 4hrs|  0hrs |  0.5hrs |
 | Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  1hrs |
-| Increase Scrolling Speed Over Time | M/H | 2hrs|  0hrs |  1hrs |
-| Score Keeping | L | 2hrs|  0hrs  | 0.25hrs  |
+| Score Keeping | L | 2hrs|  0hrs  | 0.5hrs  |
 | Insert Sprites| L | 1hrs|  0hrs  |  0.25hrs  |
 | Game Reset| L | 1hrs|  0hrs  |  0hrs  |
-| Sound Effects| L | 1hrs|  0hrs  |  0hrs  |
-| Total | H | 38hrs| 0hrs | 11hrs |
+| Sound Effects| L | 1hrs|  0hrs  |  0.25hrs  |
+| Create Landing Page| L | 3hrs|  0hrs  |  0hrs  |
+| Smooth Out Animation | L | 1hrs|  0hrs  |  0hrs  |
+| Create Insane Mode| L | 3hrs|  0hrs  |  0hrs  |
+| Total | H | 38hrs| 0hrs | 10.75hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
@@ -102,10 +110,8 @@ Helper functions should be generic enought that they can be reused in other appl
 
 ## Code Snippet
 
-**Note**: In [HTML5 ID's can be numbers](https://benfrain.com/when-and-where-you-can-use-numbers-in-id-and-class-names/)
-
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+  Removed increased scrolling speed over time because increasing the velocity would cause the pipes to not spawn. Instead, will create an Insane game mode with increased velocity and gravity. Also added landing page and smooth out animation on to-do list.   
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.

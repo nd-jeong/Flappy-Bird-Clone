@@ -5,7 +5,8 @@ let pipeHeightDifference = 650;
 let birdX = 50;
 let birdY = 360;
 let gravity = 2;
-
+let flapLift = 25;
+let clicks = 0;
 let pipeX = canvas.width;
 let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
@@ -21,19 +22,23 @@ const pipes = [
 
 let gameOn = false;
 
-// https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html
+// https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html 
+
+// https://github.com/sourabhv/FlapPyBird/tree/master/assets/sprites
 const bird = new Image();
-bird.src = 'images/bluebird-upflap.png';
+bird.src = 'images/bluebird-downflap.png';
 let pipeTop = new Image();
 pipeTop.src = 'images/pipe-green-top.png';
 const pipeBottom = new Image();
 pipeBottom.src = 'images/pipe-green-bottom.png';
 const bg = new Image();
-bg.src = 'images/background-night.png';
+bg.src = 'images/background-day.png';
 const ground = new Image();
 ground.src = 'images/base.png';
+const birdFlap = new Image();
+birdFlap.src = 'images/bluebird-upflap.png'
 // --------------------------
-
+// https://www.sounds-resource.com/mobile/flappybird/sound/5309/
 const scoreSfx = new Audio();
 scoreSfx.src = 'audio/sfx_point.wav';
 const hitSfx = new Audio();
@@ -48,7 +53,6 @@ const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(bird, birdX, birdY);
     birdY += gravity;
-    
 
     for (i = 0; i < pipes.length; i++) {
         ctx.drawImage(pipeTop, pipes[i].x, pipes[i].y - pipeHeightDifference);
@@ -63,7 +67,7 @@ const drawMap = () => {
     }
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.font = "24px sans-serif";
-    ctx.fillText(`Score: ${score}`, canvas.width - 125, canvas.height - 25);
+    ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
     increaseScore();
     gameOver();
     requestAnimationFrame(drawMap);
@@ -74,6 +78,13 @@ drawMap();
 document.addEventListener('click', function flapWings() {
     birdY -= 50;
     flapSfx.play();
+    if (clicks % 2 === 0) {
+        bird.src = "images/bluebird-downflap.png";
+    } else {
+        bird.src = 'images/bluebird-upflap.png';
+    }
+    clicks++
+    
 });
 
 
@@ -86,7 +97,6 @@ const newPipe = () => {
         });
         ctx.drawImage(pipeTop, pipeX, pipes[i].y);
         ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
-        console.log(pipes[i].y)
 }
 
 function gameOver() {
@@ -116,9 +126,9 @@ function increaseScore() {
 }
 
 function increaseSpeed() {
-    if (score % 5 === 0) {
+    if (score % 3 === 0) {
         // velocity += 0.5;
-        gravity += 0.5;
+        gravity += 0.25;
         console.log(velocity);
     }
 }
