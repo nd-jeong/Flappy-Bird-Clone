@@ -27,6 +27,8 @@ const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
     ctx.drawImage(bird, birdX, birdY);
+    birdY += gravity;
+
     ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
     ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
     
@@ -36,9 +38,8 @@ const drawMap = () => {
 drawMap();
 
 document.addEventListener('click', flapBird());
-
-const flapBird = () => {
-        birdY -= 25;
+function flapBird() {
+    birdY -= 25;
 }
 
 const newPipe = () => {
