@@ -16,6 +16,8 @@ const pipes = [
     y : pipeY}
 ];
 
+let gameOn = false;
+
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html
 const bird = new Image();
 bird.src = 'images/bluebird-upflap.png';
@@ -58,7 +60,7 @@ const drawMap = () => {
 
 drawMap();
 
-document.addEventListener('click', function() {
+document.addEventListener('click', function flapWings() {
     console.log('click');
     birdY -= 50;
 });
@@ -74,12 +76,14 @@ const newPipe = () => {
         });
         ctx.drawImage(pipeTop, pipeX, pipes[i].y);
         ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
-        // debugger;
+        debugger;
 }
 
 function gameOver() {
     if (birdY > canvas.height - ground.height) {
         console.log("ALTITUDE WARNING")
         gravity = 0;
+        document.removeEventListener('click', flapWings());
     }
+    
 }
