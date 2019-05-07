@@ -6,13 +6,14 @@ let birdX = 20;
 let birdY = 360;
 let gravity = 2;
 let pipeX = canvas.width;
-let pipeBottomY = 300;
-let pipeTopY = pipeBottomY - gap;
+let pipeY = canvas.height - 300;
+let pipeTopY = pipeY - gap;
 let velocity = 2;
 
 const pipes = [
-    {x : pipeX},
-    {y : pipeBottomY}
+    {x: pipeX - 100,
+    y : pipeY}
+    
 ];
 
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html
@@ -36,13 +37,19 @@ const drawMap = () => {
     ctx.drawImage(bird, birdX, birdY);
     birdY += gravity;
     
-    ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
-    ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
-    pipeX -= velocity;
 
-    if (pipeX === 300) {
-        newPipe();
+    for (i = 0; i < pipes.length; i++) {
+        ctx.drawImage(pipeTop, pipes[i].x, pipeTopY);
+        ctx.drawImage(pipeBottom, pipes[i].x, pipes[i].y);
+        pipes[i].x -= velocity;
+        if (pipes[i].x === 300) {
+            newPipe();
+        }
     }
+
+    // if (pipes[i].x === 300) {
+    //     newPipe();
+    // }
 
     requestAnimationFrame(drawMap);
 }
@@ -56,8 +63,12 @@ document.addEventListener('click', function() {
 
 
 const newPipe = () => {
-    pipeBottomY = (Math.floor(Math.random() * (500 - 200) + 200));
-    pipeTopY = pipeBottomY - gap;
-    ctx.drawImage(pipeBottom, pipeX, pipeBottomY);
-    ctx.drawImage(pipeTop, pipeX, pipeTopY);
+        newPipeY = (Math.floor(Math.random() * (500 - 200) + 200));
+        newPipeTopY = newPipeY - gap;
+        pipes.push({
+            x: pipeX,
+            y: newPipeY
+        });
+        ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
+        ctx.drawImage(pipeTop, pipeX, pipes[i].y - gap);
 }
