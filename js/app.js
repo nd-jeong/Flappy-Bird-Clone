@@ -12,7 +12,7 @@ let pipeTopY = pipeY - gap;
 let velocity = 2;
 
 const pipes = [
-    {x: pipeX - 100,
+    {x: pipeX,
     y : pipeY}
 ];
 
@@ -76,14 +76,19 @@ const newPipe = () => {
         });
         ctx.drawImage(pipeTop, pipeX, pipes[i].y);
         ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
-        debugger;
+        
 }
 
 function gameOver() {
     if (birdY > canvas.height - ground.height) {
-        console.log("ALTITUDE WARNING")
+        console.log("ALTITUDE WARNING");
         gravity = 0;
         document.removeEventListener('click', flapWings());
     }
-    
+    for (let k = 0; k < pipes.length; k++) {
+        if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
+            console.log("COLLISION WARNING");
+            document.removeEventListener('click', flapWings());
+        }
+    }
 }
