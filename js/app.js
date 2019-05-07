@@ -2,15 +2,17 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let pipeHeightDifference = 650;
-let birdX = 20;
+let birdX = 50;
 let birdY = 360;
 let gravity = 2;
 
 let pipeX = canvas.width;
 let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
-let gap = 150;
+let gap = 115;
 let velocity = 2;
+
+let score = 0;
 
 const pipes = [
     {x: pipeX,
@@ -53,6 +55,8 @@ const drawMap = () => {
         }
     }
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
+    ctx.font = "24px sans-serif";
+    ctx.fillText(`Score: ${score}`, canvas.width - 125, canvas.height - 25);
     gameOver();
     requestAnimationFrame(drawMap);
 }
