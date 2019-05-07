@@ -10,7 +10,10 @@ let pipeBottomY = 300;
 let pipeTopY = pipeBottomY - gap;
 let velocity = 2;
 
-const pipes = [];
+const pipes = [
+    {x : pipeX},
+    {y : pipeBottomY}
+];
 
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html
 const bird = new Image();
@@ -35,6 +38,11 @@ const drawMap = () => {
     
     ctx.drawImage(pipeTop, pipeX-100, pipeTopY);
     ctx.drawImage(pipeBottom, pipeX-100, pipeBottomY);
+    pipeX -= velocity;
+
+    if (pipeX === 300) {
+        newPipe();
+    }
 
     requestAnimationFrame(drawMap);
 }
@@ -43,12 +51,13 @@ drawMap();
 
 document.addEventListener('click', function() {
     console.log('click');
-    birdY -= 25;
+    birdY -= 50;
 });
 
 
 const newPipe = () => {
     pipeBottomY = (Math.floor(Math.random() * (500 - 200) + 200));
+    pipeTopY = pipeBottomY - gap;
     ctx.drawImage(pipeBottom, pipeX, pipeBottomY);
     ctx.drawImage(pipeTop, pipeX, pipeTopY);
 }
