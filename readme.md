@@ -78,18 +78,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Project Worksheet | M | 1hrs| 0hrs | 0.5hrs |
 | Game Init | H | 3hrs| 0hrs | 1.5hrs |
 | Player Gravity | H | 3hrs| 0hrs | 0.5hrs |
-| Board Scrolling | H | 5hrs| 0hrs | 0hrs |
-| Player Height Increase | H | 2hrs| 0hrs | 0hrs |
-| Add Obstacles| H | 3hrs|  0hrs  |  0hrs  |
+| Board Scrolling | H | 5hrs| 0hrs | 1hrs |
+| Player Height Increase | H | 2hrs| 0hrs | 1hrs |
 | Obstacle Collision Detection | H | 4hrs|  0hrs  |  0hrs  |
 | Ground Collision Detection | H | 4hrs|  0hrs |  0hrs |
-| Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  0hrs |
+| Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  1hrs |
 | Increase Scrolling Speed Over Time | M/H | 2hrs|  0hrs |  0hrs |
 | Score Keeping | L | 2hrs|  0hrs  | 0hrs  |
 | Insert Sprites| L | 1hrs|  0hrs  |  0hrs  |
 | Game Reset| L | 1hrs|  0hrs  |  0hrs  |
 | Sound Effects| L | 1hrs|  0hrs  |  0hrs  |
-| Total | H | 38hrs| 0hrs | 3hrs |
+| Total | H | 38hrs| 0hrs | 6hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
