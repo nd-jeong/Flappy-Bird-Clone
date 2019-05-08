@@ -4,6 +4,8 @@ const ctx = canvas.getContext('2d');
 const resetBtn = document.getElementById('reset-button');
 const startBtn = document.getElementById('start-button');
 const overlay = document.getElementById('overlay');
+const insaneBtn = document.getElementById('insane-mode');
+const insaneWarning = document.getElementById('insane-message');
 
 let birdX = 50;
 let birdY = 360;
@@ -77,6 +79,16 @@ startBtn.addEventListener('click', function() {
     gameOn = true;
     window.setTimeout(startGame(), 3000);
     console.log(gameOn);
+});
+
+insaneBtn.addEventListener('click', function() {
+    overlay.classList.toggle('inverted');
+    if (insaneWarning.style.display === 'inline') {
+        insaneWarning.style.display = 'none';
+    } else {
+        insaneWarning.style.display = 'inline';
+    }
+
 });
 
 function startGame() {

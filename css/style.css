@@ -7,6 +7,10 @@ h1 {
     font-size: 48px;
 }
 
+.inverted {
+    filter: invert(100%);
+}
+
 .wrapper {
     position: relative;
     margin: 0 auto;
@@ -17,6 +21,17 @@ h1 {
     background-color: white;
     margin: 0 auto;
     display: block;
+}
+
+#insane-mode {
+    width: 200px;
+    height: 200px;
+    background: url('../images/flappy-bird-overlay.png') ;
+}
+
+#insane-message {
+    display: none;
+    margin: 0 auto; 
 }
 
 #overlay {
