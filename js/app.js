@@ -1,6 +1,7 @@
 // Variables
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const resetBtn = document.getElementById('reset-button');
 let pipeHeightDifference = 650;
 let birdX = 50;
 let birdY = 360;
@@ -12,7 +13,6 @@ let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
 let gap = 115;
 let velocity = 2;
-
 let score = 0;
 
 const pipes = [
@@ -105,13 +105,13 @@ function gameOver() {
     if (birdY > canvas.height - ground.height) {
         gravity = 0;
         hitSfx.play();
-        document.removeEventListener('click', flapWings());
+        document.removeEventListener('keyup', flapWings());
     }
     for (let k = 0; k < pipes.length; k++) {
         if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
             if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
                 hitSfx.play();
-                document.removeEventListener('click', flapWings());
+                document.removeEventListener('keyup', flapWings());
             } 
         }
     }
@@ -137,5 +137,5 @@ function increaseSpeed() {
 
 resetBtn.addEventListener('click', function() {
     console.log('reset');
-    window.reload();
+    window.location.reload();
 });
