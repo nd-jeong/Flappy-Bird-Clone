@@ -1,5 +1,16 @@
 body {
     background: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #canvas {
@@ -8,6 +19,27 @@ body {
     display: block;
 }
 
+#overlay {
+    width: 80%;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    margin: 0 auto;
+    height: 750px;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #reset-button {
     text-align: center;
+    padding-top: 20px;
+}
+
+#start-button {
+    background: url('../images/start-button.png');
+    width: 260px;
+    height: 145px;
 }
