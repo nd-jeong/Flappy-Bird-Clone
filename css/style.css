@@ -6,3 +6,7 @@ body {
     background-color: white;
     transform: translateX(100%);
 }
+
+#reset-button {
+    transform: translateX(45%);
+}

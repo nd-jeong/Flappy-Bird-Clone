@@ -36,7 +36,8 @@ bg.src = 'images/background-day.png';
 const ground = new Image();
 ground.src = 'images/base.png';
 const birdFlap = new Image();
-birdFlap.src = 'images/bluebird-upflap.png'
+birdFlap.src = 'images/bluebird-upflap.png';
+
 // --------------------------
 // https://www.sounds-resource.com/mobile/flappybird/sound/5309/
 const scoreSfx = new Audio();
@@ -61,7 +62,7 @@ const drawMap = () => {
         if (pipes[i].x === 150) {
             newPipe();
         }
-        if (pipes[i].x - pipeWidth === 0) {
+        if (pipes[i].x === -(pipeWidth)) {
             pipes.shift();
         }
     }
@@ -75,16 +76,17 @@ const drawMap = () => {
 
 drawMap();
 
-document.addEventListener('click', function flapWings() {
-    birdY -= 50;
-    flapSfx.play();
-    if (clicks % 2 === 0) {
-        bird.src = "images/bluebird-downflap.png";
-    } else {
-        bird.src = 'images/bluebird-upflap.png';
+document.addEventListener('keyup', function flapWings() {
+    if (event.key    === ' ') {
+        birdY -= 50;
+        flapSfx.play();
+        if (clicks % 2 === 0) {
+            bird.src = "images/bluebird-downflap.png";
+        } else {
+            bird.src = 'images/bluebird-upflap.png';
+        }
+        clicks++;  
     }
-    clicks++
-    
 });
 
 
@@ -113,6 +115,7 @@ function gameOver() {
             } 
         }
     }
+    gameOn = false;
 }
 
 function increaseScore() {
@@ -126,14 +129,13 @@ function increaseScore() {
 }
 
 function increaseSpeed() {
-    if (score % 3 === 0) {
-        // velocity += 0.5;
+    if (score % 5 === 0) {
         gravity += 0.25;
         console.log(velocity);
     }
 }
 
-function gameReset() {
-    document.getElementById();
+resetBtn.addEventListener('click', function() {
+    console.log('reset');
     window.reload();
-}
+});
