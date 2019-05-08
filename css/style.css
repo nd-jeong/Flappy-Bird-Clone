@@ -4,9 +4,10 @@ body {
 
 #canvas {
     background-color: white;
-    transform: translateX(100%);
+    margin: 0 auto;
+    display: block;
 }
 
 #reset-button {
-    transform: translateX(45%);
+    text-align: center;
 }

@@ -2,27 +2,29 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const resetBtn = document.getElementById('reset-button');
+let birdX = 50;
+let birdY = 360;
+let clicks = 0;
+let pipeX = canvas.width;
+let score = 0;
+let gameOn = false;
 
 // Normal-game variables
 let pipeHeightDifference = 650;
-let birdX = 50;
-let birdY = 360;
 let gravity = 2;
-let flapLift = 25;
-let clicks = 0;
-let pipeX = canvas.width;
+let flapLift = 50;
 let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
 let gap = 115;
 let velocity = 2;
-let score = 0;
+
+// Insane-mode Variables
+
 
 const pipes = [
     {x: pipeX,
     y : pipeY}
 ];
-
-let gameOn = false;
 
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html 
 
@@ -94,7 +96,7 @@ drawMap();
 
 document.addEventListener('keyup', function flapWings() {
     if (event.key    === ' ') {
-        birdY -= 50;
+        birdY -= flapLift;
         flapSfx.play();
         if (clicks % 2 === 0) {
             bird.src = "images/bluebird-downflap.png";
@@ -147,7 +149,6 @@ function increaseScore() {
 function increaseSpeed() {
     if (score % 5 === 0) {
         gravity += 0.25;
-        console.log(velocity);
     }
 }
 
