@@ -75,6 +75,7 @@ Based on the initial logic defined in the previous  phases section try and break
   - Insane Mode
     - increased velocity
     - increased gravity
+    - different sprite images
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
 
@@ -91,12 +92,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  1hrs |
 | Score Keeping | L | 2hrs|  0hrs  | 0.5hrs  |
 | Insert Sprites| L | 1hrs|  0hrs  |  0.25hrs  |
-| Game Reset| L | 1hrs|  0hrs  |  0hrs  |
+| Game Reset| L | 1hrs|  0hrs  |  0.5hrs  |
 | Sound Effects| L | 1hrs|  0hrs  |  0.25hrs  |
 | Create Landing Page| L | 3hrs|  0hrs  |  0hrs  |
 | Smooth Out Animation | L | 1hrs|  0hrs  |  0hrs  |
 | Create Insane Mode| L | 3hrs|  0hrs  |  0hrs  |
-| Total | H | 38hrs| 0hrs | 10.75hrs |
+| Total | H | 38hrs| 0hrs | 11.25hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.

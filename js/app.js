@@ -2,6 +2,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const resetBtn = document.getElementById('reset-button');
+
+// Normal-game variables
 let pipeHeightDifference = 650;
 let birdX = 50;
 let birdY = 360;
@@ -25,6 +27,7 @@ let gameOn = false;
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html 
 
 // https://github.com/sourabhv/FlapPyBird/tree/master/assets/sprites
+// Normal-game images
 const bird = new Image();
 bird.src = 'images/bluebird-downflap.png';
 let pipeTop = new Image();
@@ -49,6 +52,18 @@ flapSfx.src = 'audio/sfx_wing.wav';
 
 let pipeWidth = pipeTop.width;
 // https://www.youtube.com/watch?v=cXgA1d_E-jY
+
+// Insane-game images
+const insaneBird = new Image();
+insaneBird.src = 'images/redbird-downflap.png';
+const insanePipeTop = new Image();
+insanePipeTop.src = 'images/pipe-red-top.png';
+const insanePipeBottom = new Image();
+insanePipeBottom.src = 'images/pipe-red-bottom.png';
+const insaneBg = new Image();
+insaneBg.src = 'images/background-night.png';
+const insaneBirdFlap = new Image();
+insaneBirdFlap.src = 'images/redbird-upflap.png';
 
 const drawMap = () => {
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
