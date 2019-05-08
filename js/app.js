@@ -13,6 +13,7 @@ let clicks = 0;
 let pipeX = canvas.width;
 let score = 0;
 let gameOn = false;
+let insaneMode = false;
 
 // Normal-game variables
 let pipeHeightDifference = 650;
@@ -24,13 +25,15 @@ let gap = 115;
 let scrollingSpeed = 2;
 let velocity = .1;
 
-// Insane-mode Variables
-
-
 const pipes = [
     {x: pipeX,
     y : pipeY}
 ];
+
+// Insane-mode Variables
+let insaneGravity = 3;
+let insanePipeHeightDifference = 600;
+let insaneScrollingSpeed = 3.5;
 
 // https://www.codeexplained.org/2018/08/create-flappy-bird-game-using-javascript.html 
 
@@ -75,10 +78,12 @@ insaneBirdFlap.src = 'images/redbird-upflap.png';
 
 startBtn.addEventListener('click', function() {
     console.log("start game");
-    overlay.style.display = 'none';
     gameOn = true;
-    window.setTimeout(startGame(), 3000);
-    console.log(gameOn);
+    if (gameOn === true) {
+        window.setTimeout(startGame(), 3000);
+        overlay.style.display = 'none';
+        console.log(insaneMode);
+    }
 });
 
 insaneBtn.addEventListener('click', function() {
@@ -88,16 +93,17 @@ insaneBtn.addEventListener('click', function() {
     } else {
         insaneWarning.style.display = 'inline';
     }
-
+    insaneMode = true;
 });
 
 function startGame() {
     const drawMap = () => {
-        ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
-        ctx.drawImage(bird, birdX, birdY);
-        birdY += gravity;
+        if (insaneMode === false) {
+            ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+            ctx.drawImage(bird, birdX, birdY);
+            birdY += gravity;
     
-        for (i = 0; i < pipes.length; i++) {
+            for (i = 0; i < pipes.length; i++) {
             ctx.drawImage(pipeTop, pipes[i].x, pipes[i].y - pipeHeightDifference);
             ctx.drawImage(pipeBottom, pipes[i].x, pipes[i].y);
             pipes[i].x -= scrollingSpeed;
@@ -108,9 +114,31 @@ function startGame() {
                 pipes.shift();
             }
         }
-        ctx.drawImage(ground, 0, 575, canvas.width, 100);
-        ctx.font = "24px sans-serif";
-        ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
+            ctx.drawImage(ground, 0, 575, canvas.width, 100);
+            ctx.font = "24px sans-serif";
+            ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
+        }
+        if (insaneMode === true) {
+            ctx.drawImage(insaneBg, 0, 0, canvas.width, canvas.height);
+            ctx.drawImage(insaneBird, birdX, birdY);
+            birdY += insaneGravity;
+    
+            for (i = 0; i < pipes.length; i++) {
+            ctx.drawImage(insanePipeTop, pipes[i].x, pipes[i].y - pipeHeightDifference);
+            ctx.drawImage(insanePipeBottom, pipes[i].x, pipes[i].y);
+            pipes[i].x -= insaneScrollingSpeed;
+            if (pipes[i].x === 200) {
+                console.log(pipes);
+                newPipe();
+            }
+            if (pipes[i].x === -150) {
+                pipes.shift();
+            }
+        }
+            ctx.drawImage(ground, 0, 575, canvas.width, 100);
+            ctx.font = "24px Comic Sans MS";
+            ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
+        }
         increaseScore();
         gameOver();
         requestAnimationFrame(drawMap);
@@ -139,8 +167,13 @@ function startGame() {
                 x: pipeX,
                 y: pipeY
             });
-            ctx.drawImage(pipeTop, pipeX, pipes[i].y);
-            ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
+            if (insaneMode === true) {
+                ctx.drawImage(insanePipeTop, pipeX, pipes[i].y);
+                ctx.drawImage(insanePipeBottom, pipeX, pipes[i].y);
+            } else {
+                ctx.drawImage(pipeTop, pipeX, pipes[i].y);
+                ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
+            }
     }
     
     function gameOver() {
@@ -182,91 +215,3 @@ function startGame() {
     });
 }
 
-// const drawMap = () => {
-//     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
-//     ctx.drawImage(bird, birdX, birdY);
-//     birdY += gravity;
-
-//     for (i = 0; i < pipes.length; i++) {
-//         ctx.drawImage(pipeTop, pipes[i].x, pipes[i].y - pipeHeightDifference);
-//         ctx.drawImage(pipeBottom, pipes[i].x, pipes[i].y);
-//         pipes[i].x -= scrollingSpeed;
-//         if (pipes[i].x === 150) {
-//             newPipe();
-//         }
-//         if (pipes[i].x === -150) {
-//             pipes.shift();
-//         }
-//     }
-//     ctx.drawImage(ground, 0, 575, canvas.width, 100);
-//     ctx.font = "24px sans-serif";
-//     ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
-//     increaseScore();
-//     gameOver();
-//     requestAnimationFrame(drawMap);
-// }
-
-// drawMap();
-
-// document.addEventListener('keyup', function flapWings() {
-//     if (event.key    === ' ') {
-//         birdY -= flapLift;
-//         flapSfx.play();
-//         if (clicks % 2 === 0) {
-//             bird.src = "images/bluebird-downflap.png";
-//         } else {
-//             bird.src = 'images/bluebird-upflap.png';
-//         }
-//         clicks++;  
-//     }
-// });
-
-
-// const newPipe = () => {
-//         pipeY = (Math.floor(Math.random() * (500 - 200) + 200));
-//         pipeTopY = pipeY - pipeHeightDifference;
-//         pipes.push({
-//             x: pipeX,
-//             y: pipeY
-//         });
-//         ctx.drawImage(pipeTop, pipeX, pipes[i].y);
-//         ctx.drawImage(pipeBottom, pipeX, pipes[i].y);
-// }
-
-// function gameOver() {
-//     if (birdY > canvas.height - ground.height) {
-//         gravity = 0;
-//         hitSfx.play();
-//         document.removeEventListener('keyup', flapWings());
-//     }
-//     for (let k = 0; k < pipes.length; k++) {
-//         if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
-//             if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
-//                 hitSfx.play();
-//                 document.removeEventListener('keyup', flapWings());
-//             } 
-//         }
-//     }
-//     gameOn = false;
-// }
-
-// function increaseScore() {
-//     for (let j = 0; j < pipes.length; j++) {
-//         if (birdX === pipes[j].x) {
-//             score++;
-//             scoreSfx.play();
-//             increaseSpeed();
-//         }
-//     }
-// }
-
-// function increaseSpeed() {
-//     if (score % 5 === 0) {
-//         gravity += 0.25;
-//     }
-// }
-
-// resetBtn.addEventListener('click', function() {
-//     console.log('reset');
-//     window.location.reload();
-// });
