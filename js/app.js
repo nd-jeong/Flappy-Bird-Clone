@@ -62,8 +62,9 @@ const drawMap = () => {
         if (pipes[i].x === 150) {
             newPipe();
         }
-        if (pipes[i].x === -(pipeWidth)) {
+        if (pipes[i].x === -150) {
             pipes.shift();
+            // ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
     }
     ctx.drawImage(ground, 0, 575, canvas.width, 100);
