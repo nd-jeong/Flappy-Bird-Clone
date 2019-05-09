@@ -21,7 +21,7 @@ let gravity = 2;
 let flapLift = 50;
 let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
-let gap = 115;
+let gap = 105;
 let scrollingSpeed = 2;
 let velocity = .1;
 
@@ -122,6 +122,7 @@ function startGame() {
             ctx.drawImage(insaneBg, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(insaneBird, insaneBirdX, birdY);
             birdY += insaneGravity;
+            gap = 60;
     
             for (i = 0; i < pipes.length; i++) {
             ctx.drawImage(insanePipeTop, pipes[i].x, pipes[i].y - insanePipeHeightDifference);
@@ -177,26 +178,15 @@ function startGame() {
     
     function gameOver() {
         if (birdY > canvas.height - ground.height) {
-            gravity = 0;
             hitSfx.play();
-            ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
-            if (insaneMode === false) {
-                ctx.font = '14px PressStart2P';
-                ctx.fillText('Too easy? Try clicking the bird', 20, canvas.height - 45);
-                ctx.fillText('on the intro screen', 100, canvas.height - 10)
-            }
+            gameOverInsaneMessage();
             document.removeEventListener('keyup', flapWings());
         }
         for (let k = 0; k < pipes.length; k++) {
             if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
                 if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
                     hitSfx.play();
-                    ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
-                    if (insaneMode === false) {
-                        ctx.font = '14px PressStart2P';
-                        ctx.fillText('Too easy? Try clicking the bird', 20, canvas.height - 45);
-                        ctx.fillText('on the intro screen', 100, canvas.height - 10)
-                    }
+                    gameOverInsaneMessage();
                     document.removeEventListener('keyup', flapWings());
                 } 
             }
@@ -213,13 +203,11 @@ function startGame() {
     function increaseScore() {
         for (let j = 0; j < pipes.length; j++) {
             if (birdX === pipes[j].x) {
-                console.log('score');
                 score++;
                 scoreSfx.play();
                 increaseGravity();
             }
             if (insaneMode === true && insaneBirdX === pipes[j].x) {
-                console.log('score');
                 score++;
                 scoreSfx.play();
                 increaseGravity();
@@ -234,6 +222,15 @@ function startGame() {
         }
     }
     
+    function gameOverInsaneMessage() {
+        ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
+        if (insaneMode === false) {
+            ctx.font = '14px PressStart2P';
+            ctx.fillText('Too easy? Try clicking the bird', 20, canvas.height - 45);
+            ctx.fillText('on the intro screen', 100, canvas.height - 10)
+        }
+    }
+
     resetBtn.addEventListener('click', function() {
         console.log('reset');
         window.location.reload();
