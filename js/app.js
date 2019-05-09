@@ -79,7 +79,6 @@ const insaneBirdFlap = new Image();
 insaneBirdFlap.src = 'images/redbird-upflap.png';
 
 startBtn.addEventListener('click', function() {
-    console.log("start game");
     gameOn = true;
     if (gameOn === true) {
         window.setTimeout(startGame(), 3000);
@@ -116,7 +115,7 @@ function startGame() {
             }
         }
             ctx.drawImage(ground, 0, 575, canvas.width, 100);
-            ctx.font = "24px sans-serif";
+            ctx.font = "24px Comic Sans MS";
             ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
         }
 
@@ -153,8 +152,10 @@ function startGame() {
             flapSfx.play();
             if (clicks % 2 === 0) {
                 bird.src = "images/bluebird-downflap.png";
+                insaneBird.src = 'images/redbird-downflap.png';
             } else {
                 bird.src = 'images/bluebird-upflap.png';
+                insaneBird.src = 'images/redbird-upflap.png';
             }
             clicks++;  
         }
@@ -181,14 +182,14 @@ function startGame() {
         if (birdY > canvas.height - ground.height) {
             gravity = 0;
             hitSfx.play();
-            ctx.drawImage(gameOverMessage, canvas.width - 375, canvas.height - 550);
+            ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
             document.removeEventListener('keyup', flapWings());
         }
         for (let k = 0; k < pipes.length; k++) {
             if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
                 if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
                     hitSfx.play();
-                    ctx.drawImage(gameOverMessage, canvas.width - 375, canvas.height - 550);
+                    ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
                     document.removeEventListener('keyup', flapWings());
                 } 
             }
@@ -198,18 +199,16 @@ function startGame() {
     
     function increaseScore() {
         for (let j = 0; j < pipes.length; j++) {
-            console.log(pipes[j].y);
-            console.log(birdY);
             if (birdX === pipes[j].x) {
                 console.log('score');
                 score++;
                 scoreSfx.play();
-                increaseSpeed();
+                increaseGravity();
             }
         }
     }
     
-    function increaseSpeed() {
+    function increaseGravity() {
         if (score % 5 === 0) {
             gravity += 0.25;
             insaneGravity += 0.5;
