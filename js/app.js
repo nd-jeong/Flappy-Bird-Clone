@@ -62,6 +62,8 @@ const hitSfx = new Audio();
 hitSfx.src = 'audio/sfx_hit.wav';
 const flapSfx = new Audio();
 flapSfx.src = 'audio/sfx_wing.wav';
+const insaneLaugh = new Audio();
+insaneLaugh.src = 'audio/kawhi-leonard-laugh.mp3';
 
 let pipeWidth = pipeTop.width;
 // https://www.youtube.com/watch?v=cXgA1d_E-jY
@@ -94,6 +96,7 @@ insaneBtn.addEventListener('click', function() {
     } else {
         insaneWarning.style.display = 'inline';
         insaneMode = true;
+        insaneLaugh.play();
     }
 });
 
@@ -218,7 +221,7 @@ function startGame() {
     function increaseGravity() {
         if (score % 5 === 0) {
             gravity += 0.25;
-            insaneGravity += 0.5;
+            insaneGravity += 0.25;
         }
     }
     
