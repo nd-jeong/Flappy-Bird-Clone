@@ -51,6 +51,8 @@ const ground = new Image();
 ground.src = 'images/base.png';
 const birdFlap = new Image();
 birdFlap.src = 'images/bluebird-upflap.png';
+const gameOverMessage = new Image();
+gameOverMessage.src = 'images/gameover.png';
 
 // --------------------------
 // https://www.sounds-resource.com/mobile/flappybird/sound/5309/
@@ -82,7 +84,6 @@ startBtn.addEventListener('click', function() {
     if (gameOn === true) {
         window.setTimeout(startGame(), 3000);
         overlay.style.display = 'none';
-        console.log(insaneMode);
     }
 });
 
@@ -110,7 +111,7 @@ function startGame() {
             if (pipes[i].x === 150) {
                 newPipe();
             }
-            if (pipes[i].x === -150) {
+            if (pipes[i].x === -100) {
                 pipes.shift();
             }
         }
@@ -118,20 +119,20 @@ function startGame() {
             ctx.font = "24px sans-serif";
             ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
         }
+
         if (insaneMode === true) {
             ctx.drawImage(insaneBg, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(insaneBird, birdX, birdY);
             birdY += insaneGravity;
     
             for (i = 0; i < pipes.length; i++) {
-            ctx.drawImage(insanePipeTop, pipes[i].x, pipes[i].y - pipeHeightDifference);
+            ctx.drawImage(insanePipeTop, pipes[i].x, pipes[i].y - insanePipeHeightDifference);
             ctx.drawImage(insanePipeBottom, pipes[i].x, pipes[i].y);
             pipes[i].x -= insaneScrollingSpeed;
             if (pipes[i].x === 200) {
-                console.log(pipes);
                 newPipe();
             }
-            if (pipes[i].x === -150) {
+            if (pipes[i].x <= -100) {
                 pipes.shift();
             }
         }
@@ -180,12 +181,14 @@ function startGame() {
         if (birdY > canvas.height - ground.height) {
             gravity = 0;
             hitSfx.play();
+            ctx.drawImage(gameOverMessage, canvas.width - 375, canvas.height - 550);
             document.removeEventListener('keyup', flapWings());
         }
         for (let k = 0; k < pipes.length; k++) {
             if (birdX + bird.width > pipes[k].x && birdX + bird.width < pipes[k].x + pipeTop.width) {
                 if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
                     hitSfx.play();
+                    ctx.drawImage(gameOverMessage, canvas.width - 375, canvas.height - 550);
                     document.removeEventListener('keyup', flapWings());
                 } 
             }
@@ -195,7 +198,10 @@ function startGame() {
     
     function increaseScore() {
         for (let j = 0; j < pipes.length; j++) {
+            console.log(pipes[j].y);
+            console.log(birdY);
             if (birdX === pipes[j].x) {
+                console.log('score');
                 score++;
                 scoreSfx.play();
                 increaseSpeed();
@@ -206,6 +212,7 @@ function startGame() {
     function increaseSpeed() {
         if (score % 5 === 0) {
             gravity += 0.25;
+            insaneGravity += 0.5;
         }
     }
     
