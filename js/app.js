@@ -31,6 +31,7 @@ const pipes = [
 ];
 
 // Insane-mode Variables
+let insaneBirdX = 60;
 let insaneGravity = 3;
 let insanePipeHeightDifference = 600;
 let insaneScrollingSpeed = 3.5;
@@ -121,7 +122,7 @@ function startGame() {
 
         if (insaneMode === true) {
             ctx.drawImage(insaneBg, 0, 0, canvas.width, canvas.height);
-            ctx.drawImage(insaneBird, birdX, birdY);
+            ctx.drawImage(insaneBird, insaneBirdX, birdY);
             birdY += insaneGravity;
     
             for (i = 0; i < pipes.length; i++) {
@@ -199,7 +200,7 @@ function startGame() {
     
     function increaseScore() {
         for (let j = 0; j < pipes.length; j++) {
-            if (birdX === pipes[j].x) {
+            if (birdX === pipes[j].x || insaneBirdX === pipes[j].x) {
                 console.log('score');
                 score++;
                 scoreSfx.play();

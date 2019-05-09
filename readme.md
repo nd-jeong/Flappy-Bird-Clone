@@ -91,13 +91,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Ground Collision Detection | H | 4hrs|  0hrs |  0.5hrs |
 | Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  1hrs |
 | Score Keeping | L | 2hrs|  0hrs  | 0.5hrs  |
-| Insert Sprites| L | 1hrs|  0hrs  |  0.25hrs  |
+| Insert Sprites| L | 1hrs|  0hrs  |  0.5hrs  |
 | Game Reset| L | 1hrs|  0hrs  |  0.5hrs  |
 | Sound Effects| L | 1hrs|  0hrs  |  0.25hrs  |
 | Create Landing Page| L | 3hrs|  0hrs  |  0.5hrs  |
 | Smooth Out Animation | L | 1hrs|  0hrs  |  0hrs  |
 | Create Insane Mode| L | 3hrs|  0hrs  |  0hrs  |
-| Total | H | 38hrs| 0hrs | 11.75hrs |
+| Total | H | 38hrs| 0hrs | 12hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
