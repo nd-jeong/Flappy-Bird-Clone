@@ -115,9 +115,7 @@ function startGame() {
                 pipes.shift();
             }
         }
-            ctx.drawImage(ground, 0, 575, canvas.width, 100);
-            ctx.font = "24px Comic Sans MS";
-            ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
+            drawScore();
         }
 
         if (insaneMode === true) {
@@ -136,9 +134,7 @@ function startGame() {
                 pipes.shift();
             }
         }
-            ctx.drawImage(ground, 0, 575, canvas.width, 100);
-            ctx.font = "24px Comic Sans MS";
-            ctx.fillText(`Score: ${score}`, canvas.width - 280 , canvas.height - 600);
+            drawScore();
         }
         increaseScore();
         gameOver();
@@ -184,6 +180,11 @@ function startGame() {
             gravity = 0;
             hitSfx.play();
             ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
+            if (insaneMode === false) {
+                ctx.font = '14px PressStart2P';
+                ctx.fillText('Too easy? Try clicking the bird', 20, canvas.height - 45);
+                ctx.fillText('on the intro screen', 100, canvas.height - 10)
+            }
             document.removeEventListener('keyup', flapWings());
         }
         for (let k = 0; k < pipes.length; k++) {
@@ -191,6 +192,11 @@ function startGame() {
                 if (birdY + bird.height > pipes[k].y || birdY + bird.height  < pipes[k].y - gap) {
                     hitSfx.play();
                     ctx.drawImage(gameOverMessage, canvas.width - 380, canvas.height - 550);
+                    if (insaneMode === false) {
+                        ctx.font = '14px PressStart2P';
+                        ctx.fillText('Too easy? Try clicking the bird', 20, canvas.height - 45);
+                        ctx.fillText('on the intro screen', 100, canvas.height - 10)
+                    }
                     document.removeEventListener('keyup', flapWings());
                 } 
             }
@@ -198,9 +204,21 @@ function startGame() {
         gameOn = false;
     }
     
+    function drawScore() {
+        ctx.drawImage(ground, 0, 575, canvas.width, 100);
+        ctx.font = "20px PressStart2P";
+        ctx.fillText(`Score: ${score}`, canvas.width - 320 , canvas.height - 600);
+    }
+
     function increaseScore() {
         for (let j = 0; j < pipes.length; j++) {
-            if (birdX === pipes[j].x || insaneBirdX === pipes[j].x) {
+            if (birdX === pipes[j].x) {
+                console.log('score');
+                score++;
+                scoreSfx.play();
+                increaseGravity();
+            }
+            if (insaneMode === true && insaneBirdX === pipes[j].x) {
                 console.log('score');
                 score++;
                 scoreSfx.play();
