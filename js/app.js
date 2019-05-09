@@ -23,7 +23,6 @@ let pipeY = canvas.height - 300;
 let pipeTopY = pipeY - pipeHeightDifference;
 let gap = 105;
 let scrollingSpeed = 2;
-let velocity = .1;
 
 const pipes = [
     {x: pipeX,
@@ -91,10 +90,11 @@ insaneBtn.addEventListener('click', function() {
     overlay.classList.toggle('inverted');
     if (insaneWarning.style.display === 'inline') {
         insaneWarning.style.display = 'none';
+        insaneMode = false;
     } else {
         insaneWarning.style.display = 'inline';
+        insaneMode = true;
     }
-    insaneMode = true;
 });
 
 function startGame() {
