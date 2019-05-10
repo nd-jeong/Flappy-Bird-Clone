@@ -94,10 +94,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Insert Sprites| L | 1hrs|  0hrs  |  0.5hrs  |
 | Game Reset| L | 1hrs|  0hrs  |  0.5hrs  |
 | Sound Effects| L | 1hrs|  0hrs  |  0.25hrs  |
-| Create Landing Page| L | 3hrs|  0hrs  |  0.5hrs  |
-| Smooth Out Animation | L | 1hrs|  0hrs  |  0hrs  |
+| Create Landing Page| L | 3hrs|  0hrs  |  1hrs  |
 | Create Insane Mode| L | 3hrs|  0hrs  |  5hrs  |
-| Total | H | 38hrs| 0hrs | 18hrs |
+| Total | H | 38hrs| 0hrs | 18.25hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
