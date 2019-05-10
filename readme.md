@@ -87,7 +87,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Player Gravity | H | 3hrs| 0hrs | 0.5hrs |
 | Board Scrolling | H | 5hrs| 0hrs | 1hrs |
 | Player Height Increase | H | 2hrs| 0hrs | 1hrs |
-| Obstacle Collision Detection | H | 4hrs|  0hrs  |  3hrs  |
+| Obstacle Collision Detection | H | 4hrs|  0hrs  |  3.5hrs  |
 | Ground Collision Detection | H | 4hrs|  0hrs |  0.5hrs |
 | Randomly Generated Obstacles | M/H | 4hrs|  0hrs |  1hrs |
 | Score Keeping | L | 2hrs|  0hrs  | 1hrs  |
@@ -96,8 +96,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Sound Effects| L | 1hrs|  0hrs  |  0.25hrs  |
 | Create Landing Page| L | 3hrs|  0hrs  |  0.5hrs  |
 | Smooth Out Animation | L | 1hrs|  0hrs  |  0hrs  |
-| Create Insane Mode| L | 3hrs|  0hrs  |  4hrs  |
-| Total | H | 38hrs| 0hrs | 16.5hrs |
+| Create Insane Mode| L | 3hrs|  0hrs  |  5hrs  |
+| Total | H | 38hrs| 0hrs | 18hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
