@@ -54,8 +54,8 @@ h3 {
     display: none;
     margin: 0 auto;
     user-select: none;
-    -webkit-animation: text-flicker-in-glow 4s infinite;
-    animation: text-flicker-in-glow 4s infinite;
+    -webkit-animation: text-flicker-in-glow 2s infinite;
+    animation: text-flicker-in-glow 2s infinite;
 }
 
 #overlay {
